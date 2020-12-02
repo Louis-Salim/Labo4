@@ -14,3 +14,12 @@ bool estCarree(std::vector<std::vector<int>> matrice){
    }
    return matrice.size() == count;
 }
+
+bool estReguliere(std::vector<std::vector<int>> matrice){
+   unsigned long long count = matrice[0].size();
+   for (unsigned long long i = 0; i < matrice.size(); ++i){
+      if (matrice[i].size() != count)
+         return false;
+   }
+   return true;
+}

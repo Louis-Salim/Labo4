@@ -8,6 +8,7 @@
 #include <vector>
 
 bool estCarree(std::vector<std::vector<int>> matrice);
+bool estReguliere(std::vector<std::vector<int>> matrice);
 
 
 #endif
