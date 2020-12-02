@@ -9,6 +9,6 @@
 
 bool estCarree(std::vector<std::vector<int>> matrice);
 bool estReguliere(std::vector<std::vector<int>> matrice);
-
+unsigned long long maxCol(std::vector<std::vector<int>> matrice);
 
 #endif

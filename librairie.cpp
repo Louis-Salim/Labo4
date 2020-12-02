@@ -9,8 +9,8 @@
 bool estCarree(std::vector<std::vector<int>> matrice){
    unsigned long long count = 0;
    for (unsigned long long i = 0; i < matrice.size(); ++i){
-      if (count < matrice[i].size())
-         count = matrice[i].size();
+      if (matrice.at(i).size() > count)
+         count = matrice.at(i).size();
    }
    return matrice.size() == count;
 }
@@ -18,8 +18,17 @@ bool estCarree(std::vector<std::vector<int>> matrice){
 bool estReguliere(std::vector<std::vector<int>> matrice){
    unsigned long long count = matrice[0].size();
    for (unsigned long long i = 0; i < matrice.size(); ++i){
-      if (matrice[i].size() != count)
+      if (matrice.at(i).size() != count)
          return false;
    }
    return true;
+}
+
+unsigned long long maxCol(std::vector<std::vector<int>> matrice){
+   unsigned long long count = 0;
+   for (unsigned long long i = 0; i < matrice.size(); ++i){
+      if (matrice.at(i).size() > count)
+         count = matrice.at(i).size();
+   }
+   return count;
 }
