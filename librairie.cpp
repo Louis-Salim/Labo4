@@ -32,3 +32,16 @@ unsigned long long maxCol(std::vector<std::vector<int>> matrice){
    }
    return count;
 }
+
+std::vector<int> sommeLigne(std::vector<std::vector<int>> matrice){
+   std::vector<int> vecteur_somme;
+   int calcul;
+   for (unsigned long long i = 0; i < matrice.size(); ++i){
+      calcul = 0;
+      for (unsigned long long j = 0; j < matrice.at(i).size(); ++j)
+         calcul += matrice.at(i).at(j);
+      vecteur_somme.resize(i+1);
+      vecteur_somme.at(i) = calcul;
+   }
+   return vecteur_somme;
+}
